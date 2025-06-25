@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Find Employees – Aldgate Recruitment</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -15,47 +15,38 @@
       background-color: #ffffff;
       color: #333;
     }
-
     header {
       background-color: #fff;
       padding: 15px 30px;
       border-bottom: 1px solid #ddd;
       position: relative;
     }
-
     .logo {
       max-height: 70px;
     }
-
     .nav-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
     }
-
     #navbar {
       display: flex;
       gap: 15px;
     }
-
     #navbar a {
-      margin: 0;
       color: #222;
       font-weight: 600;
       text-decoration: none;
     }
-
     #navbar a:hover {
       color: #c39a4c;
     }
-
     .menu-toggle {
       display: none;
       font-size: 28px;
       cursor: pointer;
     }
-
     @media (max-width: 768px) {
       #navbar {
         display: none;
@@ -69,41 +60,37 @@
         padding: 10px 0;
         z-index: 999;
       }
-
+      #navbar.active {
+        display: flex;
+      }
       #navbar a {
         padding: 10px 20px;
         display: block;
       }
-
-      #navbar.active {
-        display: flex;
-      }
-
       .menu-toggle {
         display: block;
       }
     }
-
     .section {
       padding: 40px 20px;
       max-width: 600px;
       margin: 0 auto;
     }
-
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
-
-    input,
-    textarea {
+    input, textarea {
       padding: 10px;
       font-size: 1rem;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-
     button {
       background-color: #002244;
       color: white;
@@ -113,49 +100,52 @@
       cursor: pointer;
       font-size: 1rem;
     }
-
     footer {
       background-color: #002244;
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <img src="logo.png" alt="Aldgate Recruitment Logo" class="logo" />
-      <div class="menu-toggle" id="mobile-menu">&#9776;</div>
-      <nav id="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="apply.html">Apply Now</a>
-        <a href="employers.html">Find Employees</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="section">
-    <h2>Find Staff</h2>
-    <form action="mailto:info@aldgaterecruitment.co.uk" method="POST" enctype="text/plain">
-      <input type="text" name="company" placeholder="Company Name" required />
-      <input type="email" name="email" placeholder="Business Email" required />
-      <input type="text" name="role" placeholder="Role Required" required />
-      <textarea name="details" placeholder="Job Description or Additional Info" rows="5"></textarea>
-      <button type="submit">Send Request</button>
-    </form>
-  </section>
+<header>
+  <div class="nav-container">
+    <img src="logo.png" alt="Aldgate Recruitment Logo" class="logo" />
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    <nav id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="apply.html">Apply Now</a>
+      <a href="employers.html">Find Employees</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <footer>
-    <p>&copy; 2025 Aldgate Recruitment. All rights reserved.</p>
-  </footer>
+<section class="section">
+  <h2>Find Staff</h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="7ad73638-227d-48d6-b3bb-8a3d4b189ec7" />
+    <input type="text" name="Company Name" placeholder="Company Name" required />
+    <input type="email" name="Email" placeholder="Business Email" required />
+    <input type="text" name="Role Needed" placeholder="Role Required" required />
+    <textarea name="Details" rows="5" placeholder="Job Description or Additional Info"></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+</section>
 
-  <script>
-    document.getElementById('mobile-menu').addEventListener('click', function () {
-      document.getElementById('navbar').classList.toggle('active');
-    });
-  </script>
+<footer>
+  <p>&copy; 2025 Aldgate Recruitment. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('mobile-menu').addEventListener('click', function () {
+    document.getElementById('navbar').classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
