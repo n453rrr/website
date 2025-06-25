@@ -40,7 +40,6 @@
     }
 
     #navbar a {
-      margin: 0;
       color: #222;
       font-weight: 600;
       text-decoration: none;
@@ -70,13 +69,13 @@
         z-index: 999;
       }
 
+      #navbar.active {
+        display: flex;
+      }
+
       #navbar a {
         padding: 10px 20px;
         display: block;
-      }
-
-      #navbar.active {
-        display: flex;
       }
 
       .menu-toggle {
@@ -134,8 +133,12 @@
       max-width: 900px;
       height: auto;
       border-radius: 8px;
-      display: block;
+      display: none;
       margin: 0 auto;
+    }
+
+    .carousel-image:first-child {
+      display: block;
     }
 
     footer {
@@ -149,7 +152,9 @@
 <body>
   <header>
     <div class="nav-container">
-      <img src="logo.png" alt="Aldgate Recruitment Logo" class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Aldgate Recruitment Logo" class="logo">
+      </a>
       <div class="menu-toggle" id="mobile-menu">&#9776;</div>
       <nav id="navbar">
         <a href="index.html">Home</a>
@@ -171,35 +176,36 @@
   </section>
 
   <div class="carousel">
-    <img src="hospitality1.jpg" class="carousel-image" style="display:block">
-    <img src="hospitality2.jpg" class="carousel-image" style="display:none">
-    <img src="hospitality3.jpg" class="carousel-image" style="display:none">
-    <img src="hospitality4.jpg" class="carousel-image" style="display:none">
-    <img src="hospitality5.jpg" class="carousel-image" style="display:none">
+    <img src="hospitality1.jpg" alt="Hospitality staff 1" class="carousel-image">
+    <img src="hospitality2.jpg" alt="Hospitality staff 2" class="carousel-image">
+    <img src="hospitality3.jpg" alt="Hospitality staff 3" class="carousel-image">
+    <img src="hospitality4.jpg" alt="Hospitality staff 4" class="carousel-image">
+    <img src="hospitality5.jpg" alt="Hospitality staff 5" class="carousel-image">
   </div>
+
+  <footer>
+    <p>&copy; 2025 Aldgate Recruitment. All rights reserved.</p>
+  </footer>
 
   <script>
     let slideIndex = 0;
     const slides = document.getElementsByClassName("carousel-image");
+
     function showSlides() {
       for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
       slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
+      if (slideIndex > slides.length) slideIndex = 1;
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 3000);
     }
+
     showSlides();
 
-    // Mobile navbar toggle
     document.getElementById('mobile-menu').addEventListener('click', function () {
       document.getElementById('navbar').classList.toggle('active');
     });
   </script>
-
-  <footer>
-    <p>&copy; 2025 Aldgate Recruitment. All rights reserved.</p>
-  </footer>
 </body>
 </html>

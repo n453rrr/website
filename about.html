@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aldgate Recruitment</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>About – Aldgate Recruitment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -40,7 +40,6 @@
     }
 
     #navbar a {
-      margin: 0;
       color: #222;
       font-weight: 600;
       text-decoration: none;
@@ -70,13 +69,13 @@
         z-index: 999;
       }
 
+      #navbar.active {
+        display: flex;
+      }
+
       #navbar a {
         padding: 10px 20px;
         display: block;
-      }
-
-      #navbar.active {
-        display: flex;
       }
 
       .menu-toggle {
@@ -84,58 +83,52 @@
       }
     }
 
-    .hero-section {
-      text-align: center;
-      padding: 60px 20px 30px;
+    .about-section {
+      background-color: #f9f9f9;
+      padding: 60px 20px;
+      border-top: 4px solid #c39a4c;
+      border-bottom: 4px solid #c39a4c;
     }
 
-    .hero-section h1 {
+    .about-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .about-container h2 {
       font-size: 2rem;
-      margin-bottom: 10px;
+      color: #002244;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    .hero-section p {
-      font-size: 1.2rem;
+    .about-container h2 span {
+      color: #c39a4c;
+    }
+
+    .about-container p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
       margin-bottom: 20px;
     }
 
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 40px;
-    }
+    @media (max-width: 768px) {
+      .about-container {
+        padding: 20px;
+      }
 
-    .cta-buttons a {
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-weight: bold;
-    }
+      .about-container h2 {
+        font-size: 1.5rem;
+      }
 
-    .apply {
-      background-color: #333;
-      color: white;
-    }
-
-    .employers {
-      background-color: #c39a4c;
-      color: white;
-    }
-
-    .carousel {
-      max-width: 100%;
-      margin: 0 auto 40px;
-      position: relative;
-    }
-
-    .carousel-image {
-      width: 90%;
-      max-width: 900px;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-      margin: 0 auto;
+      .about-container p {
+        font-size: 1rem;
+      }
     }
 
     footer {
@@ -147,9 +140,12 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="nav-container">
-      <img src="logo.png" alt="Aldgate Recruitment Logo" class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Aldgate Recruitment Logo" class="logo" />
+      </a>
       <div class="menu-toggle" id="mobile-menu">&#9776;</div>
       <nav id="navbar">
         <a href="index.html">Home</a>
@@ -160,73 +156,28 @@
       </nav>
     </div>
   </header>
-    
-      <section class="about-section">
-        <div class="about-container">
-          <h2>About <span>Aldgate Recruitment</span></h2>
-          <p>
-            Aldgate Recruitment is a dedicated recruitment agency providing qualified and reliable staff for hospitality and residential cleaning services across London. Our core values are professionalism, efficiency, and commitment to excellence in staffing solutions.
-          </p>
-          <p>
-            We support a range of businesses including hotels, pubs, restaurants, and private residences by matching them with the right candidates. Whether it's temporary cover or permanent placements, our network of vetted staff ensures consistency and quality service.
-          </p>
-        </div>
-      </section>
-      
-      <style>
-        .about-section {
-          background-color: #f9f9f9;
-          padding: 60px 20px;
-          border-top: 4px solid #c39a4c;
-          border-bottom: 4px solid #c39a4c;
-        }
-      
-        .about-container {
-          max-width: 900px;
-          margin: 0 auto;
-          background: #fff;
-          padding: 40px;
-          border-radius: 8px;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-      
-        .about-container h2 {
-          font-size: 2rem;
-          color: #002244;
-          margin-bottom: 20px;
-          text-align: center;
-        }
-      
-        .about-container h2 span {
-          color: #c39a4c;
-        }
-      
-        .about-container p {
-          font-size: 1.1rem;
-          line-height: 1.8;
-          color: #333;
-          margin-bottom: 20px;
-        }
-      
-        @media (max-width: 768px) {
-          .about-container {
-            padding: 20px;
-          }
-      
-          .about-container h2 {
-            font-size: 1.5rem;
-          }
-      
-          .about-container p {
-            font-size: 1rem;
-          }
-        }
-      </style>
-      
-    </section><footer><p>&copy; 2025 Aldgate Recruitment</p></footer>
+
+  <section class="about-section">
+    <div class="about-container">
+      <h2>About <span>Aldgate Recruitment</span></h2>
+      <p>
+        Aldgate Recruitment is a dedicated recruitment agency providing qualified and reliable staff for hospitality and residential cleaning services across London. Our core values are professionalism, efficiency, and commitment to excellence in staffing solutions.
+      </p>
+      <p>
+        We support a range of businesses including hotels, pubs, restaurants, and private residences by matching them with the right candidates. Whether it's temporary cover or permanent placements, our network of vetted staff ensures consistency and quality service.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aldgate Recruitment. All rights reserved.</p>
+  </footer>
+
   <script>
     document.getElementById('mobile-menu').addEventListener('click', function () {
       document.getElementById('navbar').classList.toggle('active');
     });
   </script>
-  </body></html>
+
+</body>
+</html>
